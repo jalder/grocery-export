@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Grocery Export",
+  "version": "1.0",
+
+  "description": "Exports data from your grocery purchases.",
+
+  "icons": {
+    "48": "icons/meh-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.pay-less.com/*"],
+      "js": ["grocery.js"]
+    }
+  ],
+  "permissions": ["downloads"],
+  "background":{"scripts": ["grocery-bg.js"]}
+}
